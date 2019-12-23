@@ -19,5 +19,8 @@
   "bugs": {
     "url": "https://github.com/gadgetboy27/blockchain-chatapp/issues"
   },
-  "homepage": "https://github.com/gadgetboy27/blockchain-chatapp#readme"
+  "homepage": "https://github.com/gadgetboy27/blockchain-chatapp#readme",
+  "dependencies": {
+    "lotion": "^0.4.26"
+  }
 }
