@@ -1,26 +1,5 @@
 {
-  "name": "blockchain-chatapp",
-  "version": "1.0.0",
-  "description": "chat-app with blockchain ",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/gadgetboy27/blockchain-chatapp.git"
-  },
-  "keywords": [
-    "blockchain",
-    "chatapp"
-  ],
-  "author": "Henry Peti",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/gadgetboy27/blockchain-chatapp/issues"
-  },
-  "homepage": "https://github.com/gadgetboy27/blockchain-chatapp#readme",
   "dependencies": {
-    "lotion": "^0.4.26"
+    "@openzeppelin/contracts": "^4.8.0"
   }
 }
