@@ -37,6 +37,14 @@ async function main() {
   const fileStorageAddress = await fileStorage.getAddress();
   console.log("✅ FileStorage deployed to:", fileStorageAddress);
 
+  // Deploy ContentModeration
+  console.log("\n📝 Deploying ContentModeration...");
+  const ContentModeration = await hre.ethers.getContractFactory("ContentModeration");
+  const contentModeration = await ContentModeration.deploy();
+  await contentModeration.waitForDeployment();
+  const contentModerationAddress = await contentModeration.getAddress();
+  console.log("✅ ContentModeration deployed to:", contentModerationAddress);
+
   // Save deployment info
   const deploymentInfo = {
     network: network.name,
@@ -46,7 +54,8 @@ async function main() {
     contracts: {
       UserProfile: userProfileAddress,
       MessageRegistry: messageRegistryAddress,
-      FileStorage: fileStorageAddress
+      FileStorage: fileStorageAddress,
+      ContentModeration: contentModerationAddress
     },
     fees: {
       messageFee: hre.ethers.formatEther(await messageRegistry.messageFee()),
@@ -79,7 +88,8 @@ async function main() {
 export const contracts = {
   UserProfile: "${userProfileAddress}",
   MessageRegistry: "${messageRegistryAddress}",
-  FileStorage: "${fileStorageAddress}"
+  FileStorage: "${fileStorageAddress}",
+  ContentModeration: "${contentModerationAddress}"
 };
 
 export const chainId = ${network.chainId};
@@ -104,6 +114,7 @@ export const networkName = "${network.name}";
     console.log(`  npx hardhat verify --network ${network.name} ${userProfileAddress}`);
     console.log(`  npx hardhat verify --network ${network.name} ${messageRegistryAddress}`);
     console.log(`  npx hardhat verify --network ${network.name} ${fileStorageAddress}`);
+    console.log(`  npx hardhat verify --network ${network.name} ${contentModerationAddress}`);
   }
 
   console.log("\n✨ Deployment complete!\n");

@@ -24,8 +24,21 @@ A fully decentralized, censorship-resistant messaging and file-sharing platform 
 - Blockchain-based user profiles and reputation system
 - Group channels (public and private)
 - File sharing with access control
+- **Multi-layered content moderation** (AI + Community + User Control)
 - Rate limiting and anti-spam mechanisms
 - Modern React/Next.js frontend with RainbowKit wallet integration
+
+### Content Moderation System ⭐ NEW
+Unlike centralized platforms, we **cannot delete** content from blockchain/IPFS. Instead, we use a revolutionary approach:
+
+- **AI-Powered Analysis**: Client-side ML detects harmful content before display
+- **Community Moderation**: Decentralized flagging and voting system
+- **User Control**: Everyone sets their own filtering preferences (stored on-chain)
+- **Hard Limits**: Illegal content (CSAM, terrorism) blocked universally
+- **Transparent**: All moderation decisions visible and appealable
+- **Preserves Free Speech**: Content stays immutable, users choose what they see
+
+📖 **[Read Full Moderation Documentation](./docs/MODERATION_SYSTEM.md)**
 
 ## Architecture
 
@@ -48,6 +61,14 @@ A fully decentralized, censorship-resistant messaging and file-sharing platform 
    - Access control (public/private files)
    - File sharing
    - Tag-based organization
+
+4. **ContentModeration.sol** - Decentralized content moderation
+   - Community-based flagging system
+   - Democratic voting on flags
+   - Appeal process
+   - Reputation for moderators
+   - User-controlled preferences
+   - Banned content registry (illegal material)
 
 ### Frontend (Next.js 14 + TypeScript)
 - **Web3 Integration**: Wagmi + RainbowKit for wallet connectivity
