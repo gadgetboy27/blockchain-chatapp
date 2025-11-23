@@ -1,1 +1,67 @@
-node_modules
+# Dependencies
+node_modules/
+.pnp
+.pnp.js
+
+# Testing
+coverage/
+coverage.json
+.nyc_output
+
+# Hardhat
+cache/
+artifacts/
+typechain/
+typechain-types/
+
+# Environment
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# Deployments (keep example, ignore actual deployments with sensitive info)
+deployments/*.json
+!deployments/.gitkeep
+
+# Build outputs
+build/
+dist/
+out/
+
+# Next.js
+chatsite/.next/
+chatsite/out/
+chatsite/build/
+
+# Logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+lerna-debug.log*
+
+# OS
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
+*~
+
+# IDE
+.idea/
+.vscode/
+*.sublime-*
+*.code-workspace
+
+# Misc
+.cache/
+temp/
+tmp/
+
+# Gas reports
+gas-report.txt
+
+# Contract artifacts
+contracts/*.dbg.json

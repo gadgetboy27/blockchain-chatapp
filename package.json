@@ -1,5 +1,46 @@
 {
+  "name": "blockchain-chatapp",
+  "version": "2.0.0",
+  "description": "Decentralized immutable messaging platform with file storage",
+  "private": true,
+  "scripts": {
+    "compile": "hardhat compile",
+    "test": "hardhat test",
+    "deploy:local": "hardhat run scripts/deploy.js --network localhost",
+    "deploy:testnet": "hardhat run scripts/deploy.js --network polygonMumbai",
+    "deploy:mainnet": "hardhat run scripts/deploy.js --network polygon",
+    "node": "hardhat node",
+    "frontend": "cd chatsite && npm run dev",
+    "verify": "hardhat verify",
+    "coverage": "hardhat coverage",
+    "lint": "solhint 'contracts/**/*.sol'",
+    "lint:fix": "solhint 'contracts/**/*.sol' --fix",
+    "clean": "hardhat clean"
+  },
   "dependencies": {
-    "@openzeppelin/contracts": "^4.8.0"
+    "@openzeppelin/contracts": "^5.0.1",
+    "@openzeppelin/contracts-upgradeable": "^5.0.1"
+  },
+  "devDependencies": {
+    "@nomicfoundation/hardhat-chai-matchers": "^2.0.3",
+    "@nomicfoundation/hardhat-ethers": "^3.0.5",
+    "@nomicfoundation/hardhat-network-helpers": "^1.0.10",
+    "@nomicfoundation/hardhat-toolbox": "^4.0.0",
+    "@nomicfoundation/hardhat-verify": "^2.0.3",
+    "@typechain/ethers-v6": "^0.5.1",
+    "@typechain/hardhat": "^9.1.0",
+    "@types/chai": "^4.3.11",
+    "@types/mocha": "^10.0.6",
+    "chai": "^4.3.10",
+    "dotenv": "^16.3.1",
+    "ethers": "^6.9.2",
+    "hardhat": "^2.19.4",
+    "hardhat-gas-reporter": "^1.0.9",
+    "solhint": "^4.0.0",
+    "solidity-coverage": "^0.8.5",
+    "typechain": "^8.3.2"
+  },
+  "engines": {
+    "node": ">=18.0.0"
   }
 }
